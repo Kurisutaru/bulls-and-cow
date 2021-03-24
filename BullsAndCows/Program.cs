@@ -39,7 +39,7 @@ namespace BullsAndCows
         {
           EngineCheck(tmp);
 
-          if(cowCount == 4)
+          if(bullCount == 4)
           {
             win = true;
             Console.Clear();
@@ -68,15 +68,15 @@ namespace BullsAndCows
       {
         if(secretKey[i] == inputKey[i])
         {
-          cowCount++;
+          bullCount++;
         }
         else if (secretKey.Contains(inputKey[i]))
         {
-          bullCount++;
+          cowCount++;
         }
       }
 
-      inputHistory.Add(new InputHistory() { input = input, result = $"Cow : {cowCount}, Bull : {bullCount}" });
+      inputHistory.Add(new InputHistory() { input = input, result = $"Bull : {bullCount}, Cow : {cowCount}" });
 
     }
 
